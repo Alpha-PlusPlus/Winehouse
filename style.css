@@ -24,7 +24,9 @@ html {
 section {
 	height: 100%;
 	left: 0;
+  overflow: hidden;
 	position: absolute;
+  transition: left 1.5s;
 	width: 100%;
 }
 .section-wrapper {
@@ -133,12 +135,17 @@ section {
 	border-radius: 50%;
 	height: 1rem;
 	margin: 0 .3rem;
+  transition: background-color .3s;
 	width: 1rem;
+}
+
+.circle-1 {
+  background-color: #ddd;
 }
 
 /* Section 1 */
 
-.section-5 {
+.section-1 {
 	z-index: 50;
 }
 .section-1-wrapper {
@@ -164,6 +171,9 @@ section {
 
 /* Section 2 */
 
+.section-2 {
+	z-index: 40;
+}
 .section-2-wrapper {
 	align-items: center;
 	background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.9)), url(img/section-2-bg.jpg) center no-repeat;
@@ -204,12 +214,17 @@ section {
 
 /* Section 3 */
 
+.section-3 {
+  background-color: #000;
+	z-index: 30;
+}
 .section-3-wrapper {
 	align-items: center;
 	background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.9)), url(img/section-3-bg.jpg) center no-repeat;
 	background-size: cover;
 	display: flex;
 	justify-content: center;
+  transition: opacity 1.5s;
 }
 .section-3-heading {
 	color: #ccc;
@@ -228,11 +243,20 @@ section {
 .grapes-img {
 	opacity: .7;
 	position: absolute;
+  transition: all 1.5s;
 	width: 40rem;
+}
+
+.grapes-img:hover {
+  opacity: 1;
+  transform: scale(2);
 }
 
 /* Section 4 */
 
+.section-4 {
+	z-index: 20;
+}
 .section-4-wrapper {
 	align-items: center;
 	display: flex;
@@ -265,6 +289,9 @@ section {
 
 /* Section 5 */
 
+.section-5 {
+	z-index: 10;
+}
 .section-5-wrapper {
 	align-items: center;
 	background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.5)), url(img/section-5-bg.jpg) center no-repeat;
