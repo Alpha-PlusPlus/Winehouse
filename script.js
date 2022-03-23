@@ -38,6 +38,7 @@ const moveForward = () => {
     }
 
     progressCounter();
+    sectionScaling();
 }
 
 // Move backward 1 section
@@ -58,6 +59,17 @@ const moveBackward = () => {
   counter--;
 
   progressCounter();
+  sectionScaling();
+}
+
+// Scale the section wrappers
+
+const sectionScaling = () => {
+  document.querySelectorAll('.section-wrapper').forEach((section) => {
+    section.classList.remove("unscale");
+  });
+
+  document.querySelector(`.section-${counter + 1}-wrapper`).classList.add("unscale");
 }
 
 // Mouse Wheel Event
@@ -95,3 +107,19 @@ document.querySelector('.grapes-img').addEventListener('mouseover', () => {
 document.querySelector('.grapes-img').addEventListener('mouseout', () => {
   document.querySelector('.section-3-wrapper').style.opacity = "1";
 });
+
+// Menu
+
+const menu = document.querySelector('.menu');
+
+menu.addEventListener('click', () => {
+
+  document.querySelector('.navbar').classList.toggle("change");
+
+});
+
+// Section 1
+
+const section1Wrapper = document.querySelector('.section-1-wrapper');
+
+section1Wrapper.style.transform = 'scale(1)';
