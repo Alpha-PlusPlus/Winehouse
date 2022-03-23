@@ -32,6 +32,110 @@ section {
 	width: inherit;
 }
 
+/* Navbar */
+
+.navbar {
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	position: fixed;
+	top: 1rem;
+	width: 100%;
+	z-index: 100;
+}
+.logo {
+	height: 6rem;
+}
+.nav-list {
+	display: flex;
+	justify-content: center;
+}
+.nav-link {
+	border: .1rem solid #fff;
+	color: #fff;
+	font-size: 1.5rem;
+	letter-spacing: .1rem;
+	margin: 0 3rem;
+	overflow: hidden;
+	padding: .2rem 0;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	width: 15rem;
+}
+.nav-link::before {
+	background-color: #d50000;
+	content: "";
+	height: 5rem;
+	left: -20%;
+	opacity: .8;
+	position: absolute;
+	transform: rotate(-40deg) translateX(-4rem);
+	transform-origin: left bottom;
+	transition: left .3s;
+	width: 150%;
+}
+.nav-link:hover::before {
+	left: 110%;
+}
+.page-btn {
+	background-color: transparent;
+	border: none;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+}
+.left-btn {
+	left: 4rem;
+}
+.left-btn img {
+	transform: rotate(-90deg);
+}
+.right-btn {
+	right: 4rem;
+}
+.right-btn img {
+	transform: rotate(90deg);
+}
+.page-btn img {
+	cursor: pointer;
+	opacity: .4;
+	transition: opacity .2s;
+	width: 4rem;
+}
+.page-btn img:hover {
+	opacity: 1;
+}
+
+/* Progress Bar */
+
+.progress-wrapper {
+	bottom: 2rem;
+	left: 3rem;
+	position: fixed;
+	z-index: 100;
+}
+.progress {
+	margin: 1rem 0;
+	text-align: center;
+}
+.progress h2 {
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: 300;
+}
+.circle-wrapper {
+	display: flex;
+}
+.circle {
+	border: .1rem solid #fff;
+	border-radius: 50%;
+	height: 1rem;
+	margin: 0 .3rem;
+	width: 1rem;
+}
+
 /* Section 1 */
 
 .section-5 {
